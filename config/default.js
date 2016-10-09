@@ -30,12 +30,6 @@ module.exports = {
     ], 
     
     module: {
-
-        eslint: {
-            failOnWarning: false, 
-            failOnError: false, 
-            cache: true, 
-        },
         
         preLoaders: [
             {
@@ -62,7 +56,7 @@ module.exports = {
             }, 
             { 
                 test: /\.css$/, 
-                loader: ["style", "css"],
+                loaders: ["style", "css"],
             }, 
             { 
                 test: /\.scss$/, 
@@ -73,8 +67,8 @@ module.exports = {
                 loaders: ["style", "css", "less"],
             }, 
             { 
-                test: /\.coffee/, 
-                loaders: "coffee-loader",
+                test: /\.coffee$/, 
+                loader: "coffee-loader",
             }, 
             { 
                 test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/, 
